@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Fonte: 'Dancing Script', cursive;
+    --Vermelho: rgb(228, 66, 66);
+    --Branco: white;
+    --Dark: #313338;
+}
+
+.topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    background-color: var(--Dark);
+}
+.topo h1{
+    float: left;
+    font-family: var(--Fonte);
+    font-size: 3.5rem;
+    text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
+    color: var(--Vermelho);
+}
+.topo .links {
+    position: relative;
+    top: 8px;
+    float: right;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.topo .links a {
+    text-decoration: none;
+    color: var(--Branco);
+    margin: 10px;
+}
+.topo .links a:hover{
+    text-decoration: underline;
+    color: var(--Vermelho);
+}
