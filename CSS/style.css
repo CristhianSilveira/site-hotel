@@ -21,6 +21,7 @@
     float: left;
     font-family: var(--Fonte);
     font-size: 3.5rem;
+    text-align: center;
     text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
     color: var(--Vermelho);
 }
@@ -40,4 +41,5 @@
 .topo .links a:hover{
     text-decoration: underline;
     color: var(--Vermelho);
+    transition: 0.8s;
 }
