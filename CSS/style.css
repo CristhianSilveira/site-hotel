@@ -14,24 +14,33 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100px;
+    height: 10vh;
     background-color: var(--Dark);
 }
 .topo h1{
     float: left;
     font-family: var(--Fonte);
-    font-size: 3.5rem;
+    font-size: 7vh;
     text-align: center;
     text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
     color: var(--Vermelho);
+}
+.topo .menu-bar{
+    display: none;
 }
 .topo .links {
     position: relative;
     top: 8px;
     float: right;
     padding: 20px;
-    font-size: 17px;
+    font-size: 2.3vh;
     font-weight: bold;
+}
+.topo .links ul{
+    list-style-type: none;
+}
+.topo .links li {
+    display: inline;
 }
 .topo .links a {
     text-decoration: none;
@@ -42,4 +51,17 @@
     text-decoration: underline;
     color: var(--Vermelho);
     transition: 0.8s;
+}
+
+@media (max-width: 768px){
+    .topo .links{
+        display: none;
+    }
+    .topo .menu-bar{
+        display: inline;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+    }
 }
