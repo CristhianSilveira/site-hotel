@@ -28,7 +28,7 @@ header {
     text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
 }
 .logo h1{
-    font-size: 6.3vh;
+    font-size: 6vh;
 }
 .nav-list {
     display: flex;
