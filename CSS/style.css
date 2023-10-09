@@ -6,62 +6,92 @@
 :root{
     --Fonte: 'Dancing Script', cursive;
     --Vermelho: rgb(228, 66, 66);
-    --Branco: white;
-    --Dark: #313338;
+    --Branco: #fff;
+    --Dark: #24252a;
 }
 
-.topo{
+header {
+    background-color: var(--Dark);
+    box-shadow: 0px 3px 10px #464646;
+}
+.nav-bar{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 10vh;
-    background-color: var(--Dark);
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
 }
-.topo h1{
-    float: left;
+.logo{
+    display: flex;
+    align-items: center;
     font-family: var(--Fonte);
-    font-size: 7vh;
-    text-align: center;
-    text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
     color: var(--Vermelho);
+    text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
 }
-.topo .menu-bar{
-    display: none;
+.logo h1{
+    font-size: 6.3vh;
 }
-.topo .links {
-    position: relative;
-    top: 8px;
-    float: right;
-    padding: 20px;
-    font-size: 2.3vh;
+.nav-list {
+    display: flex;
+    align-items: center;
     font-weight: bold;
 }
-.topo .links ul{
+.nav-list ul{
+    display: flex;
+    justify-content: center;
     list-style-type: none;
+    position: relative;
+    top: 5px;
 }
-.topo .links li {
-    display: inline;
+.nav-item {
+    margin: 0 15px;
 }
-.topo .links a {
+.nav-link {
     text-decoration: none;
+    font-size: 1.8vh;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--Branco);
-    margin: 10px;
+    font-weight: 500;
 }
-.topo .links a:hover{
+.nav-list a:hover{
     text-decoration: underline;
     color: var(--Vermelho);
     transition: 0.8s;
 }
+.menu-bar{
+    display: none;
+}
+.mobile-menu{
+    display: none;
+}
 
-@media (max-width: 768px){
-    .topo .links{
+@media (max-width: 737px){
+    .nav-bar{
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
         display: none;
     }
-    .topo .menu-bar{
-        display: inline;
-        color: white;
+    .menu-bar{
+        display: block;
+        color: var(--Branco);
         cursor: pointer;
-        position: relative;
-        top: 8px;
+    }
+    .mobile-menu ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu a:hover{
+        text-decoration: underline;
+        color: var(--Vermelho);
+        transition: 0.8s;
+    }
+    .open{
+        display: block;
     }
 }
