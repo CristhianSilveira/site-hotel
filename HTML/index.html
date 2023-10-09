@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Teste</title>
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Hotel Teste</title>   
 </head>
 <body>
     <header>
-        <nav>
-            <div class="topo">
+        <nav class="nav-bar">
+            <div class="logo">
                 <h1>Hotel Copacabana</h1>
-                <div class="menu-bar">
-                    <span class="material-symbols-outlined">
-                        menu
-                    </span>
-                </div>
-                <div class="links">
-                    <ul>
-                        <li><a href="passeios.html">Passeios</a></li>
-                        <li><a href="quartos.html">Quartos</a></li>
-                        <li><a href="">Contato</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="passeios.html" class="nav-link">Passeios</a></li>
+                    <li class="nav-item"><a href="quartos.html" class="nav-link">Quartos</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="menu-bar">
+                <span onclick="menuShow()" class="material-symbols-outlined">
+                    menu
+                </span>
             </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="passeios.html" class="nav-link">Passeios</a></li>
+                <li class="nav-item"><a href="quartos.html" class="nav-link">Quartos</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            </ul>
+        </div>
     </header>
     
     <main>
@@ -38,6 +46,6 @@
 
         </div>
     </footer>
-    
+    <script src="../JS/script.js"></script>
 </body>
 </html>
