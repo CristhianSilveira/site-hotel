@@ -8,6 +8,7 @@
     --Vermelho: rgb(228, 66, 66);
     --Branco: #fff;
     --Dark: #24252a;
+    --FontePadrao: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -18,22 +19,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 6rem;
+    padding: 0 34px;
+    height: 100px;
 }
 .logo{
     display: flex;
     align-items: center;
     font-family: var(--Fonte);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
     color: var(--Vermelho);
     text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
-}
-.logo h1{
-    font-size: 6vh;
+    
 }
 .nav-list {
     display: flex;
     align-items: center;
-    font-weight: bold;
 }
 .nav-list ul{
     display: flex;
@@ -47,8 +49,7 @@ header {
 }
 .nav-link {
     text-decoration: none;
-    font-size: 1.8vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--FontePadrao);
     color: var(--Branco);
     font-weight: 500;
 }
@@ -64,10 +65,43 @@ header {
     display: none;
 }
 
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px; 
+    background-color: var(--Dark);
+}
+.copy{
+    font-family: var(--FontePadrao);
+    margin-right: 50px;
+    color: var(--Branco);
+}
+.social-media ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.social-media li{    
+    list-style-type: none;
+    cursor: pointer;
+    color: var(--Branco);
+    font-size: 25px;
+
+}
+.social-media li:hover{
+    color: var(--Vermelho);
+}
+
+
+
+
 @media (max-width: 737px){
-    .nav-bar{
-        padding: 1.5rem 4rem;
-    }
     .nav-item{
         display: none;
     }
