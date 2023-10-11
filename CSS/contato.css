@@ -66,6 +66,83 @@ header {
 }
 
 
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contato{
+    background-color: orange;
+    height: 45vh;
+    width: 400px;
+    text-align: center;
+    color: white;
+    word-break: break-all;
+}
+.contato h1{
+    margin: 20px;
+}
+.contato h2{
+    text-align: start;
+    position: relative;
+    left: 80px;
+    margin-top: 30px;
+}
+.contato p{
+    position: relative;
+    left: 80px;
+    text-align: justify;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    border: 1px solid black;
+    margin-top: 30px;
+    width: 400px;
+}
+form legend{
+    font-size: 25px;
+    color: rgb(255, 174, 0);
+    padding: 10px;
+    text-align: center;
+    width: 380px;
+}
+form label{
+    margin-top: 20px;
+    position: relative;
+    right: 60px;
+    color: rgb(94, 95, 94);
+    margin-bottom: 8px;
+}
+form textarea{
+    position: relative;
+    left: 10px;
+    border: 1px solid rgb(94, 95, 94);
+    min-width: 200px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 100px;
+}
+form input {
+    border-color: rgb(207, 208, 212);
+}
+form #enviar{
+    background-color: rgba(29, 28, 28, 0.904);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+form #enviar:hover{
+    background-color: rgba(255, 166, 0, 0.795);
+    transition: 0.8s;
+}
+
+
 .rodape{
     display: flex;
     justify-content: center;
@@ -127,5 +204,11 @@ header {
     }
     .open{
         display: block;
+    }
+    .contato{
+        width: 300px;
+    }
+    main{
+        flex-direction: column;
     }
 }
