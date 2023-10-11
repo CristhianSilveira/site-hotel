@@ -42,7 +42,31 @@
     </header>
     
     <main>
+        <div class="contato">
+            <h1>Contato</h1>
+            <h2>Endereço</h2>
+            Avenida Atlantica, 150, Copacabana 
+            <br>
+            Rio de Janeiro - RJ.
+            <h2>Email</h2>
+            <p>reservas@gmail.com</p>
+            <h2>Telefone</h2>
+            <p>+55 21 4002-8922</p>
+        </div>
+        <form action="../PHP/script.php">
+            <legend>Contato</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <label for="assunto">Assunto:</label>
+            <input type="text" name="assunto" id="assunto">
+            <label for="msg">Mesagem:</label>
+            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            <input id="enviar" type="submit" value="Enviar">
+        </form>
 
+        
     </main>
 
     <footer class="rodape">
