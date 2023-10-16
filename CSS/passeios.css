@@ -10,6 +10,13 @@
     --Dark: #24252a;
     --FontePadrao: Arial, Helvetica, sans-serif;
 }
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-color: #0c313e38;
+}
+
 
 header {
     background-color: var(--Dark);
@@ -26,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     font-family: var(--Fonte);
-    font-size: 2rem;
+    font-size: 4.1vh;
     font-weight: bold;
     text-align: center;
     color: var(--Vermelho);
@@ -63,6 +70,46 @@ header {
 }
 .mobile-menu{
     display: none;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+    width: 60vw;
+}
+.tours {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 45vw;
+}
+.tours h2{
+    padding: 20px 10px 10px 10px;
+    width: 90%;
+    color: rgb(114, 18, 240);
+}
+.tours p{
+    border-top: 1px solid rgb(187, 183, 183);
+    width: 90%;
+    padding: 15px;
+    text-align: justify;      
+}
+.tours img{
+    border: 6px double black;
+    width: 40vw;
+    height: 35vw;
+    margin: 10px;
+    margin-bottom: 30px;
 }
 
 

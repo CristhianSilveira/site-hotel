@@ -10,6 +10,13 @@
     --Dark: #24252a;
     --FontePadrao: Arial, Helvetica, sans-serif;
 }
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-color: #0c313e38;
+}
+
 
 header {
     background-color: var(--Dark);
@@ -26,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     font-family: var(--Fonte);
-    font-size: 2rem;
+    font-size: 4.1vh;
     font-weight: bold;
     text-align: center;
     color: var(--Vermelho);
@@ -66,78 +73,78 @@ header {
 }
 
 
-main{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 .contato{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+}
+.card-contato{
     background-color: orange;
-    height: 45vh;
-    width: 400px;
     text-align: center;
     color: white;
-    word-break: break-all;
+    width: 40vw;
 }
-.contato h1{
-    margin: 20px;
+.card-contato h1{
+    padding: 10px;
 }
-.contato h2{
+.card-contato h2{
     text-align: start;
-    position: relative;
-    left: 80px;
-    margin-top: 30px;
+    padding: 15px;
+
 }
-.contato p{
-    position: relative;
-    left: 80px;
+.card-contato p{
+    margin: 10px 20px;
     text-align: justify;
 }
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: start;
+
+.form {
     border: 1px solid black;
-    margin-top: 30px;
-    width: 400px;
+    width: 40vw;
+    border-radius: 5%;
+    background-color: #FFFFFF;
 }
-form legend{
-    font-size: 25px;
+.form h2{
     color: rgb(255, 174, 0);
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-    width: 380px;
 }
-form label{
-    margin-top: 20px;
-    position: relative;
-    right: 60px;
-    color: rgb(94, 95, 94);
-    margin-bottom: 8px;
+.form .campo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 10px 0;
 }
-form textarea{
-    position: relative;
-    left: 10px;
-    border: 1px solid rgb(94, 95, 94);
-    min-width: 200px;
+.form label{
+    color: rgb(95, 95, 94); 
+    width: 70px;
+}
+.form input{
+    background-color: #E8EFF9;
+    border-radius: 20px;
+    padding: 5px;
+    width: 60%;
+}
+.form textarea{
+    background-color: #E8EFF9;
+    border: 1px solid black;
+    padding: 5px;
+    min-width: 60%;
+    max-width: 60%;
     min-height: 100px;
-    max-width: 200px;
     max-height: 100px;
 }
-form input {
-    border-color: rgb(207, 208, 212);
-}
-form #enviar{
+.form #enviar{
     background-color: rgba(29, 28, 28, 0.904);
     color: white;
-    padding: 10px;
-    margin-top: 10px;
     cursor: pointer;
     border: none;
+    width: 150px;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
 }
-form #enviar:hover{
+.form #enviar:hover{
     background-color: rgba(255, 166, 0, 0.795);
     transition: 0.8s;
 }
@@ -205,10 +212,19 @@ form #enviar:hover{
     .open{
         display: block;
     }
+
+
     .contato{
-        width: 300px;
-    }
-    main{
+        display: flex;
         flex-direction: column;
+        text-align: center;
+    }
+    .card-contato {
+        
+        width: 80%;
+    }
+    .contato form {
+        margin-top: 100px;
+        width: 80%;
     }
 }
