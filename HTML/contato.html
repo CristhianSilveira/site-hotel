@@ -9,7 +9,7 @@
     <!--Icones do Awesome-->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
     <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
-    <title>Hotel Teste 2</title>    
+    <title>Contato - Hotel Copacabana</title>    
 </head>
 <body>
     <header>
@@ -20,8 +20,9 @@
             <div class="nav-list">
                 <ul>
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="passeios.html" class="nav-link">Passeios</a></li>
                     <li class="nav-item"><a href="quartos.html" class="nav-link">Quartos</a></li>
+                    <li class="nav-item"><a href="passeios.html" class="nav-link">Passeios</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
                     <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
                 </ul>
             </div>
@@ -34,8 +35,9 @@
         <div class="mobile-menu">
             <ul>
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="passeios.html" class="nav-link">Passeios</a></li>
                 <li class="nav-item"><a href="quartos.html" class="nav-link">Quartos</a></li>
+                <li class="nav-item"><a href="passeios.html" class="nav-link">Passeios</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
                 <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
             </ul>
         </div>
@@ -43,30 +45,40 @@
     
     <main>
         <div class="contato">
-            <h1>Contato</h1>
-            <h2>Endereço</h2>
-            Avenida Atlantica, 150, Copacabana 
-            <br>
-            Rio de Janeiro - RJ.
-            <h2>Email</h2>
-            <p>reservas@gmail.com</p>
-            <h2>Telefone</h2>
-            <p>+55 21 4002-8922</p>
+            <div class="card-contato">
+                <h1>Contato</h1>
+                <h2>Endereço</h2>
+                <p>Avenida Atlantica, 150, Copacabana Rio de Janeiro - RJ.</p>
+                <h2>Email</h2>
+                <p>reservas@gmail.com</p>
+                <h2>Telefone</h2>
+                <p>+55 21 4002-8922</p>
+            </div>
+            <form class="form" action="../PHP/script.php">
+                    <div>
+                        <h2>Contato</h2>
+                    </div>
+                    <div class="campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="campo">
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" name="assunto" id="assunto" placeholder="Assunto">
+                    </div>
+                    <div class="campo">
+                        <label for="msg">Mesagem:</label>
+                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
+                    </div>
+                    <div class="campo">
+                        <input id="enviar" type="submit" value="Enviar">
+                    </div>
+            </form>
         </div>
-        <form action="../PHP/script.php">
-            <legend>Contato</legend>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
-            <label for="assunto">Assunto:</label>
-            <input type="text" name="assunto" id="assunto">
-            <label for="msg">Mesagem:</label>
-            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
-            <input id="enviar" type="submit" value="Enviar">
-        </form>
-
-        
     </main>
 
     <footer class="rodape">
