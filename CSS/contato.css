@@ -5,22 +5,26 @@
 }
 :root{
     --Fonte: 'Dancing Script', cursive;
-    --Vermelho: rgb(228, 66, 66);
+    --FontePadrao: Arial, Helvetica, sans-serif;
+    --Vermelho: #FF0000;
     --Branco: #fff;
     --Dark: #24252a;
-    --FontePadrao: Arial, Helvetica, sans-serif;
+    --CinzaEscuro: #222;
+    --Cinzento: #eee;
+    --CinzentoEscuro: #444;
+    --Roxo: #734FE8;
 }
 body{
     position: relative;
     min-height: 100vh;
     padding-bottom: 100px;
-    background-color: #0c313e38;
+    background-color: var(--Branco);
 }
 
 
 header {
     background-color: var(--Dark);
-    box-shadow: 0px 3px 10px #464646;
+    box-shadow: 0px 3px 10px var(--Cinzento);
 }
 .nav-bar{
     display: flex;
@@ -37,8 +41,7 @@ header {
     font-weight: bold;
     text-align: center;
     color: var(--Vermelho);
-    text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
-    
+    text-shadow: 2px 1px #524949;    
 }
 .nav-list {
     display: flex;
@@ -63,7 +66,7 @@ header {
 .nav-list a:hover{
     text-decoration: underline;
     color: var(--Vermelho);
-    transition: 0.8s;
+    transition: 1.2s;
 }
 .menu-bar{
     display: none;
@@ -73,7 +76,7 @@ header {
 }
 
 
-.contato{
+.container{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,7 +105,7 @@ header {
     border: 1px solid black;
     width: 40vw;
     border-radius: 5%;
-    background-color: #FFFFFF;
+    background-color: var(--Cinzento);
 }
 .form h2{
     color: rgb(255, 174, 0);
@@ -176,12 +179,24 @@ header {
     cursor: pointer;
     color: var(--Branco);
     font-size: 25px;
-
 }
 .social-media li:hover{
     color: var(--Vermelho);
 }
 
+
+body::-webkit-scrollbar {
+    width: 10px;              
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--CinzaEscuro);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+}
 
 
 
@@ -214,7 +229,7 @@ header {
     }
 
 
-    .contato{
+    .container{
         display: flex;
         flex-direction: column;
         text-align: center;

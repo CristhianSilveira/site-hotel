@@ -5,22 +5,26 @@
 }
 :root{
     --Fonte: 'Dancing Script', cursive;
-    --Vermelho: rgb(228, 66, 66);
+    --FontePadrao: Arial, Helvetica, sans-serif;
+    --Vermelho: #FF0000;
     --Branco: #fff;
     --Dark: #24252a;
-    --FontePadrao: Arial, Helvetica, sans-serif;
+    --CinzaEscuro: #222;
+    --Cinzento: #eee;
+    --CinzentoEscuro: #444;
+    --Roxo: #734FE8;
 }
 body{
     position: relative;
     min-height: 100vh;
     padding-bottom: 100px;
-    background-color: #0c313e38;
+    background-color: var(--Branco);
 }
 
 
 header {
     background-color: var(--Dark);
-    box-shadow: 0px 3px 10px #464646;
+    box-shadow: 0px 3px 10px var(--Cinzento);
 }
 .nav-bar{
     display: flex;
@@ -37,8 +41,7 @@ header {
     font-weight: bold;
     text-align: center;
     color: var(--Vermelho);
-    text-shadow: 2px 1px rgba(41, 45, 175, 0.859);
-    
+    text-shadow: 2px 1px #524949;    
 }
 .nav-list {
     display: flex;
@@ -63,7 +66,7 @@ header {
 .nav-list a:hover{
     text-decoration: underline;
     color: var(--Vermelho);
-    transition: 0.8s;
+    transition: 1.2s;
 }
 .menu-bar{
     display: none;
@@ -73,43 +76,35 @@ header {
 }
 
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 50px 0;
-    width: 60vw;
+.container{
+    margin: 90px auto;
 }
 .tours {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 45vw;
+    width: 50vw;
+    margin: 30px auto;
 }
 .tours h2{
-    padding: 20px 10px 10px 10px;
-    width: 90%;
-    color: rgb(114, 18, 240);
+    margin-right: 10px;
+    padding-bottom: 5px;
+    color: var(--Roxo);
+    border-bottom: 1px solid rgb(187, 183, 183);
 }
 .tours p{
-    border-top: 1px solid rgb(187, 183, 183);
-    width: 90%;
-    padding: 15px;
+    margin: 10px 0;
     text-align: justify;      
 }
 .tours img{
     border: 6px double black;
-    width: 40vw;
-    height: 35vw;
-    margin: 10px;
-    margin-bottom: 30px;
+    object-fit: cover;
+    object-position: center;
+    width: 95%;
+    height: 40vw;
+    margin: 10px auto;
+    
 }
 
 
@@ -139,12 +134,24 @@ main{
     cursor: pointer;
     color: var(--Branco);
     font-size: 25px;
-
 }
 .social-media li:hover{
     color: var(--Vermelho);
 }
 
+
+body::-webkit-scrollbar {
+    width: 10px;              
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--CinzaEscuro);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+}
 
 
 
