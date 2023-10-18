@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: var(--FontePadrao);
 }
 :root{
     --Fonte: 'Dancing Script', cursive;
@@ -36,12 +37,14 @@ header {
 .logo{
     display: flex;
     align-items: center;
+}
+.logo h1{
+    font-size: 6vh;
     font-family: var(--Fonte);
-    font-size: 4.1vh;
     font-weight: bold;
-    text-align: center;
     color: var(--Vermelho);
-    text-shadow: 2px 1px #524949;    
+    text-shadow: 2px 1px #524949; 
+    
 }
 .nav-list {
     display: flex;
@@ -83,21 +86,21 @@ header {
     margin: 50px;
 }
 .card-contato{
-    background-color: orange;
+    background-color: #dfaf20;
     text-align: center;
     color: white;
     width: 40vw;
 }
 .card-contato h1{
-    padding: 10px;
+    margin: 20px;
+    text-shadow: 2px 2px 2px black;
 }
 .card-contato h2{
     text-align: start;
-    padding: 15px;
-
+    margin: 0 15px;
 }
 .card-contato p{
-    margin: 10px 20px;
+    margin: 20px;
     text-align: justify;
 }
 
@@ -107,31 +110,31 @@ header {
     border-radius: 5%;
     background-color: var(--Cinzento);
 }
-.form h2{
-    color: rgb(255, 174, 0);
-    padding: 15px;
+.form h1{
+    color: #dfaf20;
+    margin: 15px;
     text-align: center;
 }
 .form .campo{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 15px 10px 0;
+    padding: 15px 10px 0;
 }
 .form label{
-    color: rgb(95, 95, 94); 
-    width: 70px;
+    color: var(--CinzaEscuro); 
+    width: 80px;
 }
 .form input{
     background-color: #E8EFF9;
     border-radius: 20px;
-    padding: 5px;
+    padding: 8px;
     width: 60%;
 }
 .form textarea{
     background-color: #E8EFF9;
     border: 1px solid black;
-    padding: 5px;
+    padding: 8px;
     min-width: 60%;
     max-width: 60%;
     min-height: 100px;
@@ -139,16 +142,17 @@ header {
 }
 .form #enviar{
     background-color: rgba(29, 28, 28, 0.904);
-    color: white;
+    color: var(--Branco);
     cursor: pointer;
     border: none;
     width: 150px;
     margin: auto;
     padding: 10px;
     margin-bottom: 10px;
+    
 }
 .form #enviar:hover{
-    background-color: rgba(255, 166, 0, 0.795);
+    background-color: #dfaf20;
     transition: 0.8s;
 }
 
@@ -234,11 +238,10 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         text-align: center;
     }
-    .card-contato {
-        
+    .card-contato { 
         width: 80%;
     }
-    .contato form {
+    .container form {
         margin-top: 100px;
         width: 80%;
     }
