@@ -82,6 +82,70 @@ header {
 .container{
     margin: 90px auto;
 }
+
+.content-reserve{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50vw;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    background-color: var(--Cinzento);
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 500px;
+}
+.content-reserve form{
+    width: 100%;
+}
+.content-reserve h1{
+    color: #dfaf20;
+    margin: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+.content-reserve .campo{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 15px 10px 0;
+}
+.content-reserve label{
+    color: var(--CinzaEscuro);
+    padding-bottom: 10px;
+    width: 100%;
+}
+.content-reserve input, select{
+    background-color: #E8EFF9;
+    padding: 8px;
+    width: 80%;
+}
+.content-reserve .obrig{
+    margin: 0;
+    font-size: 16px;
+}
+.content-reserve span{
+    font-size: 12px;
+    margin: 10px;
+    color: var(--Vermelho);
+}
+.content-reserve #enviar{
+    background-color: rgba(29, 28, 28, 0.904);
+    color: var(--Branco);
+    cursor: pointer;
+    border: none;
+    margin: auto;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.content-reserve #enviar:hover{
+    background-color: #dfaf20;
+    transition: 0.8s;
+}
+
 .content-main {
     display: flex;
     justify-content: center;
@@ -144,7 +208,7 @@ header {
 
 
 body::-webkit-scrollbar {
-    width: 10px;              
+    width: 8px;            
 }
   
 body::-webkit-scrollbar-track {
@@ -152,9 +216,9 @@ body::-webkit-scrollbar-track {
 }
   
 body::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 20px;
+    background-color: #FFCF00;
 }
+
 
 
 
