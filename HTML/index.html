@@ -45,6 +45,44 @@
     
     <main>
         <div class="container">
+
+            <div class="content-reserve">
+                <form action="../PHP/script.php">
+                    <h1>Reservar Quarto</h1>
+                    <div class="campo">
+                        <label for="name">Nome: <span class="obrig">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="Nome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="sname">Sobrenome: <span class="obrig">*</span></label>
+                        <input type="text" name="sname" id="sname" placeholder="Sobrenome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="cheg">Data de Entrada: <span class="obrig">*</span></label>
+                        <input type="date" name="cheg" id="cheg" min="2023-10-23" required>
+                    </div>
+                    <div class="campo">
+                        <label for="saida">Data de Saída: <span class="
+                            obrig">*</span></label>
+                        <input type="date" name="saida" id="saida" min="2023-10-24" max="2050-10-24" required>
+                    </div>
+                    <div class="campo">
+                        <label for="hosp">Quantidade de pessoas: <span class="obrig">*</span></label>
+                        <input type="number" name="hosp" id="hosp" min="1" max="10" required placeholder="Qntd de Pessoas">
+                    </div>
+                    <div class="campo">
+                        <label for="quarto">Quarto: <span class="obrig">*</span></label>
+                        <select name="quarto" id="quarto" required>
+                            <option value="suite">Suite</option>
+                            <option value="solteiro">Solteiro</option>
+                            <option value="casal" selected>Casal</option>
+                            <option value="familia">Familia</option>
+                        </select>
+                    </div>
+                    <span> * Campos Obrigatórios</span>
+                    <div class="campo"><input id="enviar" type="submit" value="Agendar"></div>
+                </form>
+            </div>
             <div class="content-main">
                 <h2>Sobre</h2>
                 <p>Somos... </p>
