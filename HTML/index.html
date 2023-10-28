@@ -45,6 +45,18 @@
     
     <main>
         <div class="container">
+            <div class="content-about">
+                <h2>HOTEL</h2>
+                <p>Berço da Bossa nova e fonte de inspiração da canção brasileira mais conhecida no mundo, o Hotel Copabana está localizado no bairro mais nobre e charmoso do Rio, onde tendências são criadas, experiências compartilhadas e memórias perpetuadas. O lifestyle de Copacabana, que é refletido em nossas acomodações, desde a recepção à cobertura, sempre contagia os hóspedes. </p>
+                <p>Está localizado na Avenida Atlântica e nos presenteia com uma vista 360º de nossa cobertura, que comtepla a Estátua do Cristo Redentor, o Bondinho Pão de Açúcar, O Forte de Copacabana, A estátua de Carlos Drummond de Andrade e a Praia de Copacabana fazendo com que cada foto tirada em momentos de descontração torne-se um emoldurável cartão postal. </p>
+                <p>Visitar a Cidade Maravilhosa é sempre um prazer e nos preparamos para oferecer uma experiência incrível aos nossos hóspedes com nosso atendimento diferenciado e ambientes ímpares, possibilitando uma experiência inesquecível do check-in ao check-out.</p>
+            </div>
+
+            <div class="content-main">
+                <h2>SOBRE</h2>
+                <p>Somos... </p>
+                <img src="../img/cristo-redentor.jpg" alt="Cristo Redentor">
+            </div>
 
             <div class="content-reserve">
                 <form action="../PHP/script.php">
@@ -67,8 +79,12 @@
                         <input type="date" name="saida" id="saida" min="2023-10-24" max="2050-10-24" required>
                     </div>
                     <div class="campo">
-                        <label for="hosp">Quantidade de pessoas: <span class="obrig">*</span></label>
-                        <input type="number" name="hosp" id="hosp" min="1" max="10" required placeholder="Qntd de Pessoas">
+                        <label for="hospA">Adultos: <span class="obrig">*</span></label>
+                        <input type="number" name="hospA" id="hospA" min="1" max="8" required placeholder="Qntd de Adultos">
+                    </div>
+                    <div class="campo">
+                        <label for="hospC">Crianças: <span class="obrig">*</span></label>
+                        <input type="number" name="hospC" id="hospC" min="0" max="8" required placeholder="Qntd de Crianças">
                     </div>
                     <div class="campo">
                         <label for="quarto">Quarto: <span class="obrig">*</span></label>
@@ -80,13 +96,8 @@
                         </select>
                     </div>
                     <span> * Campos Obrigatórios</span>
-                    <div class="campo"><input id="enviar" type="submit" value="Agendar"></div>
+                    <div class="campo"><input id="enviar" type="submit" value="Reservar"></div>
                 </form>
-            </div>
-            <div class="content-main">
-                <h2>Sobre</h2>
-                <p>Somos... </p>
-                <img src="../img/cristo-redentor.jpg" alt="Cristo Redentor">
             </div>
         </div>
     </main>
