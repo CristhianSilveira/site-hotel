@@ -8,3 +8,14 @@ function menuShow() {
         document.querySelector('i').className = 'fa-solid fa-xmark fa-lg';
     }
 }
+let chegada = document.getElementById('cheg');
+let saida = document.getElementById('saida');
+
+const dataAtual = new Date();
+const fusoHorario = dataAtual.getTimezoneOffset(); 
+dataAtual.setMinutes(dataAtual.getMinutes() - fusoHorario);
+
+const dataLocal = dataAtual.toISOString().split('T')[0];
+chegada.min = dataLocal;
+saida.min = dataLocal;
+
