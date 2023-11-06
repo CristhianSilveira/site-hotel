@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: auto;
 }
 .reserva{
@@ -23,6 +24,14 @@ body{
     color: blue;
     text-shadow: 1px 1px 1px black;
 }
+.reserva button{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    width: 30%;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .info strong{
     color: limegreen;
 }
@@ -32,7 +41,3 @@ body{
     align-self: flex-start;
     text-align: justify;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> fd6c32ad8f1dff3b16ec3a02467ba8143e99e473

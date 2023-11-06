@@ -126,7 +126,7 @@ header {
     text-shadow: 1px 1px 1px black;
 }
 .form .campo{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 15px 10px 0;
 }
 .form label{
@@ -168,6 +168,25 @@ header {
 }
 .form #enviar:hover{
     background-color: var(--Laranja);
+}
+.form .obrig{
+    margin: 0;
+    font-size: 16px;
+}
+.form span{
+    font-size: 12px;
+    margin: 10px;
+    color: black;
+}
+#form-msg{
+    display: none;
+    margin: 10px auto;
+    padding: 15px;
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
 }
 
 
