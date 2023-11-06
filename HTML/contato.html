@@ -51,27 +51,30 @@
                 <h2>Telefone</h2>
                 <p>+55 21 4002-8922</p>
             </div>
-            <form class="form" action="../PHP/script.php">
+            <form class="form" id="form-contact">
                     <div>
                         <h1>Contato</h1>
                     </div>
                     <div class="campo">
-                        <label for="nome">Nome:</label>
-                        <input type="text" name="nome" id="nome" placeholder="Nome">
+                        <label for="name">Nome: <span class="obrig">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="Nome">
                     </div>
                     <div class="campo">
-                        <label for="email">Email:</label>
+                        <label for="email">Email: <span class="obrig">*</span></label>
                         <input type="email" name="email" id="email" placeholder="Email">
                     </div>
                     <div class="campo">
-                        <label for="assunto">Assunto:</label>
+                        <label for="assunto">Assunto: <span class="obrig">*</span></label>
                         <input type="text" name="assunto" id="assunto" placeholder="Assunto">
                     </div>
                     <div class="campo">
                         <label for="msg">Mesagem:</label>
                         <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
                     </div>
+                    <span>* Campos Obrigatórios</span>
                     <input id="enviar" type="submit" value="Enviar">
+                    
+                    <div id="form-msg"></div>
             </form>
         </div>
     </main>

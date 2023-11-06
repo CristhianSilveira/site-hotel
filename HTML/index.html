@@ -56,7 +56,7 @@
             </div>
 
             <div class="content-reserve">
-                <form action="../PHP/script.php">
+                <form action="../PHP/script.php" method="post">
                     <h1>Reservar Quarto</h1>
                     <div class="campo">
                         <label for="name">Nome: <span class="obrig">*</span></label>
@@ -86,10 +86,14 @@
                     <div class="campo">
                         <label for="quarto">Quarto: <span class="obrig">*</span></label>
                         <select name="quarto" id="quarto" required>
-                            <option value="suite">Suite</option>
-                            <option value="solteiro">Solteiro</option>
-                            <option value="casal" selected>Casal</option>
-                            <option value="familia">Familia</option>
+                            <option value="suite presidencial">Suite Presidencial</option>
+                            <option value="suite deluxe">Suite Deluxe</option>
+                            <option value="solteiro" selected>Solteiro</option>
+                            <option value="twin Duplo">Twin Duplo</option>
+                            <option value="casal">Casal</option>
+                            
+                            <option value="duplo">Duplo</option>
+                            
                         </select>
                     </div>
                     <span> * Campos Obrigatórios</span>
@@ -112,6 +116,19 @@
             </ul>   
         </div>
     </footer>
-    <script src="../JS/script.js"></script>
+    <script>
+        
+        let chegada = document.getElementById('cheg');
+        let saida = document.getElementById('saida');
+
+        const dataAtual = new Date();
+        const fusoHorario = dataAtual.getTimezoneOffset(); 
+        dataAtual.setMinutes(dataAtual.getMinutes() - fusoHorario);
+
+        const dataLocal = dataAtual.toISOString().split('T')[0];
+        chegada.min = dataLocal;
+        saida.min = dataLocal;
+        
+    </script>
 </body>
 </html>
