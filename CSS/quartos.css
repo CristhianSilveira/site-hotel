@@ -149,15 +149,65 @@ header {
 .valor2{
     display: none;
 }
-.room img{
+.container-slider{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.container-imagens{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+}
+.slider{
+    opacity: 0;
+    transition: opacity;
+    width: 100%;
+    border-radius: 18px;
+}
+.on{
+    opacity: 1;
+}
+#prev-button, #next-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.carrossel{
+    margin-top: 60px;
+    display: flex;
     float: right;
-    width: 50%;
-    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+}
+.room img{
+    width: 90%;
+    margin-left: 10px;
+    height: 70%;
     align-self: center;
     border: 6px double black;
     object-fit: cover;
     object-position: center;
 }
+#prev-button, #next-button{
+    background-color: #222;
+    padding: 20px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
 
 
 .rodape{
