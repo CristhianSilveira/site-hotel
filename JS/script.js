@@ -32,7 +32,7 @@ contato.addEventListener('submit', function (event) {
     
     } else {
         formMsg.innerHTML = "Mensagem enviada com sucesso!";
-        formMsg.style.backgroundColor = 'lightgreen';
+        formMsg.style.backgroundColor = 'green';
         nome.value = '';
         email.value = ''; 
         assunto.value = '';
