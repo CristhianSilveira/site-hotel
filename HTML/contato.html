@@ -51,10 +51,8 @@
                 <h2>Telefone</h2>
                 <p>+55 21 4002-8922</p>
             </div>
-            <form class="form" id="form-contact">
-                    <div>
-                        <h1>Contato</h1>
-                    </div>
+            <form id="form">
+                    <h2>Contato</h2>
                     <div class="campo">
                         <label for="name">Nome: <span class="obrig">*</span></label>
                         <input type="text" name="name" id="name" placeholder="Nome">
@@ -72,7 +70,9 @@
                         <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
                     </div>
                     <span>* Campos Obrigatórios</span>
-                    <input id="enviar" type="submit" value="Enviar">
+                    <div id="campo-enviar">
+                        <input id="enviar" type="submit" value="Enviar">
+                    </div>
                     
                     <div id="form-msg"></div>
             </form>
@@ -92,6 +92,6 @@
             </ul>   
         </div>
     </footer>
-    <script src="../JS/script.js"></script>
+    <script src="../JS/contato.js"></script>
 </body>
 </html>
