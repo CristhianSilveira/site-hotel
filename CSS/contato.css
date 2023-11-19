@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--FontePadrao);
+    box-sizing: border-box;
 }
 :root{
     --FonteTitulos: 'Playfair Display', serif;
@@ -25,7 +26,7 @@
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     background-color: var(--Branco);
 }
 
@@ -47,7 +48,7 @@ header {
     text-align: center;
 }
 .logo h1{
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-family: var(--FonteTitulos);
     font-weight: bold;
     color: var(--Vermelho);
@@ -73,7 +74,7 @@ header {
     color: var(--Branco);
     font-size: 1rem;
     font-weight: 500;
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 .nav-list a:hover{
     text-decoration: underline;
@@ -92,13 +93,16 @@ header {
     align-items: center;
     justify-content: space-around;
     align-items: center;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
 }
 .card-contato{
     background-color: var(--Laranja);
     text-align: center;
     color: white;
     width: 40vw;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 .card-contato h1{
     margin: 20px;
@@ -106,43 +110,46 @@ header {
 }
 .card-contato h2{
     text-align: start;
-    margin: 0 15px;
+    margin: 0 15px 10px 15px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .card-contato p{
-    margin: 10px 20px 20px 20px;
+    padding: 0 20px 20px 20px;
     text-align: justify;
 }
 
-.form {
+#form {
     border: 1px solid black;
-    width: 40vw;
+    width: 32vw;
     border-radius: 10px;
     background-color: var(--Cinzento);
+    margin-bottom: 100px;
 }
-.form h1{
+#form h2{
     color: var(--Laranja);
-    margin: 15px;
+    font-size: 32px;
     text-align: center;
     text-shadow: 1px 1px 1px black;
+    margin: 15px;
 }
-.form .campo{
-    margin-bottom: 10px;
-    padding: 15px 10px 0;
+#form .campo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 15px 10px 0;
 }
-.form label{
-    display: inline-block;
-    text-align: start;
+#form label{
     padding-bottom: 5px;
+    width: 100%;
 }
-.form input{
+#form input{
     background-color: var(--CinzaClaro);
-    width: 90%;
+    width: 80%;
     padding: 10px;
     border: 1px solid var(--CinzentoClaro);
     border-radius: 5px;
 }
-.form textarea{
-    display: block;
+#form textarea{
     background-color: var(--CinzaClaro);
     border: 1px solid var(--CinzentoClaro);
     padding: 8px;
@@ -151,42 +158,45 @@ header {
     min-height: 100px;
     max-height: 100px;
 }
-.form #enviar{
-    display: block;
-    text-align: center;
-    width: 150px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    background-color: rgba(29, 28, 28, 0.904);
-    color: var(--Branco);  
-    border: none; 
-    cursor: pointer;
-    transition: background-color 0.5s ease-in-out;
-    
-}
-.form #enviar:hover{
-    background-color: var(--Laranja);
-}
-.form .obrig{
+#form .obrig{
     margin: 0;
     font-size: 16px;
 }
-.form span{
+#form span{
     font-size: 12px;
     margin: 10px;
+    align-self: flex-start;
     color: black;
 }
+#form #campo-enviar{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+#form #enviar{
+    background-color: rgba(29, 28, 28, 0.904);
+    color: var(--Branco);
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in;   
+}
+#form #enviar:hover{
+    background-color: var(--Laranja);
+}
+
 #form-msg{
     display: none;
     margin: 10px auto;
     padding: 15px;
-    width: 50%;
+    width: 60%;
+    color: white;
     text-align: center;
+    font-weight: bold;
     border: 1px solid black;
     border-radius: 5px;
-    color: white;
 }
 
 
@@ -273,19 +283,13 @@ body::-webkit-scrollbar-thumb {
     .container{
         display: flex;
         flex-direction: column;
-        text-align: center;
+        gap: 100px;
     }
     .card-contato { 
         width: 90%;
     }
-    .container form {
-        margin-top: 100px;
+    .form {
+        margin-bottom: 100px;
         width: 80%;
-    }
-    .container .form label{
-        float: left;
-    }
-    .container .form textarea{
-       display: inline;
     }
 }
