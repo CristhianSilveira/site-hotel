@@ -57,7 +57,7 @@
 
             <div class="content-reserve">
                 <form action="../PHP/script.php" method="post">
-                    <h1>Reservar Quarto</h1>
+                    <h2>Reservar Quarto</h2>
                     <div class="campo">
                         <label for="name">Nome: <span class="obrig">*</span></label>
                         <input type="text" name="name" id="name" placeholder="Nome" required>
@@ -97,7 +97,9 @@
                         </select>
                     </div>
                     <span> * Campos Obrigatórios</span>
-                    <div class="campo"><input id="enviar" type="submit" value="Reservar"></div>
+                    <div id="campo-enviar">
+                        <input id="enviar" type="submit" value="Reservar">
+                    </div>
                 </form>
             </div>
         </div>
@@ -109,26 +111,13 @@
         </div>
         <div class="social-media">
             <ul>
-                <li><i class="lab la-facebook"></i></li>
-                <li><i class="lab la-instagram"></i></li>
-                <li><i class="lab la-twitter"></i></li>
-                <li><i class="lab la-youtube"></i></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="lab la-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="lab la-instagram"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="lab la-twitter"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="lab la-youtube"></i></a></li>
             </ul>   
         </div>
     </footer>
-    <script>
-        
-        let chegada = document.getElementById('cheg');
-        let saida = document.getElementById('saida');
-
-        const dataAtual = new Date();
-        const fusoHorario = dataAtual.getTimezoneOffset(); 
-        dataAtual.setMinutes(dataAtual.getMinutes() - fusoHorario);
-
-        const dataLocal = dataAtual.toISOString().split('T')[0];
-        chegada.min = dataLocal;
-        saida.min = dataLocal;
-        
-    </script>
+    <script src="../JS/index.js"></script>
 </body>
 </html>

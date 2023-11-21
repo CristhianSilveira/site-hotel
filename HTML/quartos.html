@@ -44,7 +44,7 @@
         <div class="container">
             <div class="room">
                 <div class="description">
-                    <h2>QUARTO SOLTEIRO |</h2>
+                    <h2>QUARTO SOLTEIRO</h2>
                     <p>Cama de Solteiro, Armário, TV de "40", Ar-Condicionado, Frigobar e Banheiro </p>
                     <div class="icons">
                         <i class="fa-solid fa-tv"><span>TV</span></i>
@@ -61,7 +61,7 @@
                     <button class="prev-button"><img src="../img/arrow.png" alt="prev-button"></button>
                     <div class="container-images">
                         <img src="../img/quarto-solteiro.jpeg" alt="Cama do Quarto de Solteiro" class="slider on">
-                        <img src="../img/banheiro.jpg" alt="Banheiro do Quarto de Solteiro" class="slider">
+                        <img src="../img/quarto-solteiro-banheiro.jpg" alt="Banheiro do Quarto de Solteiro" class="slider">
                     </div>
                     <button class="next-button"><img src="../img/arrow.png" alt="next-button"></button>
                 </div>
@@ -208,53 +208,13 @@
         </div>
         <div class="social-media">
             <ul>
-                <li><i class="lab la-facebook"></i></li>
-                <li><i class="lab la-instagram"></i></li>
-                <li><i class="lab la-twitter"></i></li>
-                <li><i class="lab la-youtube"></i></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="lab la-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="lab la-instagram"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="lab la-twitter"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="lab la-youtube"></i></a></li>
             </ul>   
         </div>
     </footer>
-    <script>
-        const carousels = document.querySelectorAll('.container-slider');
-        carousels.forEach(carousel => {
-    const slider = carousel.querySelectorAll('.slider');
-    const btnPrev = carousel.querySelector('.prev-button');
-    const btnNext = carousel.querySelector('.next-button');
-
-    let currentSlide = 0;
-
-    function hideSlider() {
-        slider.forEach(item => item.classList.remove('on'));
-    }
-
-    function showSlider() {
-        slider[currentSlide].classList.add('on');
-    }
-
-    function nextSlider() {
-        hideSlider();
-        if (currentSlide === slider.length - 1) {
-            currentSlide = 0;
-        } else {
-            currentSlide++;
-        }
-        showSlider();
-    }
-
-    function prevSlider() {
-        hideSlider();
-        if (currentSlide === 0) {
-            currentSlide = slider.length - 1;
-        } else {
-            currentSlide--;
-        }
-        showSlider();
-    }
-
-    btnNext.addEventListener('click', nextSlider);
-    btnPrev.addEventListener('click', prevSlider);
-});
-    </script>
+    <script src="../JS/quartos.js"></script>
 </body>
 </html>
