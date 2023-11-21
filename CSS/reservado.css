@@ -1,43 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{ 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: auto;
+    min-height: 100vh;
+    background-color: #eee;
 }
 .reserva{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 100px 0;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 80vw;
     max-width: 500px;
-    padding: 20px;
+    padding: 15px;
 }
 .reserva h1{
-    padding: 5px;
+    padding-bottom: 5px;
     border-bottom: 1px solid black;
     color: blue;
     text-shadow: 1px 1px 1px black;
+    margin-bottom: 20px;
 }
 .reserva button{
     background-color: black;
     color: white;
+    font-size: 16px;
     padding: 15px;
     width: 30%;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    margin-top: 15px;
+}
+.info p {
+    margin: 15px 20px;
 }
 .info strong{
     color: limegreen;
 }
 .info{
     font-size: 1.5em;
-    margin: 0 20px;
     align-self: flex-start;
     text-align: justify;
 }

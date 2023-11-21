@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--FontePadrao);
+    box-sizing: border-box;
 }
 :root{
     --FonteTitulos: 'Playfair Display', serif;
@@ -25,14 +26,18 @@
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     background-color: var(--Branco);
+    background-image: url('../img/praia-copacabana.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 
 header {
     background-color: var(--Dark);
-    box-shadow: 0px 3px 10px var(--Cinzento);
+    box-shadow: 0px 3px 10px var(--CinzaEscuro);
 }
 .nav-bar{
     display: flex;
@@ -47,7 +52,7 @@ header {
     text-align: center;
 }
 .logo h1{
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-family: var(--FonteTitulos);
     font-weight: bold;
     color: var(--Vermelho);
@@ -92,22 +97,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px auto;
-    gap: 20px;
+    margin: 80px auto;
+    gap: 100px;
 }
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
     width: 50vw;
     padding: 15px;  
-    margin-bottom: 10vh;
 }
 .about h2{
-    margin: 10px;
-    padding-bottom: 5px;
+    padding: 10px 10px 5px 10px;
     color: var(--Roxo);
     border-bottom: 1px solid rgb(187, 183, 183);
 }
@@ -117,17 +119,56 @@ header {
 .about li{
     list-style-position: inside;
     list-style-type: square;
-    margin: 10px;
+    margin: 10px 0;
     text-align: justify;  
 }
-.about img{
-    border: 6px double black;
+.container-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    margin: auto;
+    width: 90%;
+}
+.container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.container-images img{
+    height: 300px;
+    border: 2px solid black;
     object-fit: cover;
     object-position: center;
-    width: 95%;
-    height: 40vw;
-    margin: 10px auto;  
+} 
+.slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
 }
+.on {
+    opacity: 1;
+} 
+.prev-button, .next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.prev-button img, .next-button img {
+    width: 100%;
+    height: 100%;
+}
+.prev-button {
+    transform: rotate(180deg);
+}
+
 
 
 .rodape{
@@ -157,7 +198,10 @@ header {
     color: var(--Branco);
     font-size: 25px;
 }
-.social-media li:hover{
+.social-media a{
+    color: white;
+}
+.social-media a:hover{
     color: var(--Vermelho);
 }
 
@@ -212,6 +256,9 @@ body::-webkit-scrollbar-thumb {
 
 
     .about{
-        width: 70%;
+        width: 80%;
+    }
+    .container-slider{
+        width: 100%;
     }
 }

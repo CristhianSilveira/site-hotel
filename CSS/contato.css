@@ -28,12 +28,16 @@ body{
     min-height: 100vh;
     padding-bottom: 70px;
     background-color: var(--Branco);
+    background-image: url('../img/vista-pao-de-acucar.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 
 header {
     background-color: var(--Dark);
-    box-shadow: 0px 3px 10px var(--Cinzento);
+    box-shadow: 0px 3px 10px var(--CinzaEscuro);
 }
 .nav-bar{
     display: flex;
@@ -100,8 +104,7 @@ header {
     text-align: center;
     color: white;
     width: 40vw;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
     border-radius: 5px;
 }
 .card-contato h1{
@@ -227,7 +230,10 @@ header {
     color: var(--Branco);
     font-size: 25px;
 }
-.social-media li:hover{
+.social-media a{
+    color: white;
+}
+.social-media a:hover{
     color: var(--Vermelho);
 }
 
@@ -288,7 +294,7 @@ body::-webkit-scrollbar-thumb {
     .card-contato { 
         width: 90%;
     }
-    .form {
+    #form {
         margin-bottom: 100px;
         width: 80%;
     }

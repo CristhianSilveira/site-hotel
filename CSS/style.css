@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--FontePadrao);
+    box-sizing: border-box;
 }
 :root{
     --FonteTitulos: 'Playfair Display', serif;
@@ -25,7 +26,7 @@
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 2px;
+    padding-bottom: 70px;
     background-color: var(--Branco);
     background-image: url('../img/fundo.jpg');
     background-size: cover;
@@ -42,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 30px;
+    margin: 0 1rem;
     height: 110px;
 }
 .logo{
@@ -52,7 +53,7 @@ header {
 }
 .logo h1{
     font-family: var(--FonteTitulos);
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: bold;
     color: var(--Vermelho);
     text-shadow: 2px 1px #524949;   
@@ -64,25 +65,24 @@ header {
 .nav-list ul{
     display: flex;
     justify-content: center;
+    list-style-type: none;
     position: relative;
     top: 5px;
-    list-style-type: none;
 }
 .nav-item {
     margin: 0 15px;
 }
 .nav-link {
     font-family: var(--FonteBotaoeMenu);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
     color: var(--Branco);
-    transition: 0.5s;;
+    transition: color 0.5s;
 }
 .nav-list a:hover{
     color: var(--Vermelho);
     text-decoration: underline;
-    transition: 1.2s;
 }
 .menu-bar{
     display: none;
@@ -97,57 +97,30 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px auto;
-    gap: 20px;
+    margin: 100px auto 0 auto;
+    gap: 100px;
 }
 
-.content-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.content-about, .content-main {
     background-color: white;
     width: 50vw;
-    margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
 }
-.content-about h2{
+.content-about h2, .content-main h2{
     padding-bottom: 5px;
     color: var(--Roxo);
     border-bottom: 1px solid rgb(187, 183, 183);
 }
-.content-about p{
+.content-about p, .content-main p{
     margin: 10px 0;
     text-align: justify;      
 }
 
-
-.content-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: white;
-    width: 50vw;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 10px;
-}
-.content-main h2{
-    color: var(--Roxo);
-    border-bottom: 1px solid rgb(187, 183, 183);
-    margin-right: 10px;
-    padding-bottom: 5px;
-}
-.content-main p{
-    margin: 10px 0;
-    text-align: justify;      
-}
 .content-main img{
     width: 95%;
     height: 40vw;
-    margin: 10px auto;
+    margin: 10px;
     border: 6px double black;
     object-fit: cover;
     object-position: center;
@@ -155,13 +128,9 @@ header {
 
 
 .content-reserve{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     background-color: var(--Cinzento);
     border: 1px solid black;
     width: 50vw;
-    margin: 0 auto;
     margin-bottom: 50px;
     max-width: 500px;
     border-radius: 10px;
@@ -169,9 +138,10 @@ header {
 .content-reserve form{
     width: 100%;
 }
-.content-reserve h1{
+.content-reserve h2{
     color: var(--Laranja);
     margin: 15px;
+    font-size: 32px;
     text-align: center;
     text-shadow: 1px 1px 1px black;
 }
@@ -182,7 +152,7 @@ header {
     padding: 15px 10px 0;
 }
 .content-reserve label{
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     width: 100%;
 }
 .content-reserve input, select{
@@ -201,17 +171,20 @@ header {
     margin: 10px;
     color: black;
 }
+.content-reserve #campo-enviar{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
 .content-reserve #enviar{
     background-color: rgba(29, 28, 28, 0.904);
     color: var(--Branco);
     cursor: pointer;
     border: none;
-    margin: auto;
-    margin-bottom: 10px;
     width: 150px;
     padding: 10px;
     border-radius: 10px;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in;
     
 }
 .content-reserve #enviar:hover{
@@ -246,7 +219,10 @@ header {
     cursor: pointer;
     font-size: 25px;
 }
-.social-media li:hover{
+.social-media a{
+    color: white;
+}
+.social-media a:hover{
     color: var(--Vermelho);
 }
 
@@ -264,9 +240,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
-
-@media (max-width: 737px){
+@media (max-width: 768px){
     .logo h1{
         font-size: 2.3em;
     }
@@ -307,7 +281,6 @@ body::-webkit-scrollbar-thumb {
         width: 70%;
     }
     .content-reserve {
-        margin-top: 60px;
         width: 80%;
     }
 }
